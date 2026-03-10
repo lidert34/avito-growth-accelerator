@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Target, Zap, TrendingUp, Users } from "lucide-react";
+import leadsImg from "@/assets/leads-funnel.jpg";
+import topSearchImg from "@/assets/top-search.jpg";
 
 const stats = [
   { icon: Target, value: "10+", label: "новых магазинов в месяц" },
@@ -46,30 +48,58 @@ const AboutSection = () => {
           ))}
         </div>
 
+        <div className="mt-14 grid md:grid-cols-2 gap-6">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl overflow-hidden shadow-card"
+          >
+            <img
+              src={leadsImg}
+              alt="Забираю лидов у конкурентов"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-card rounded-2xl p-8 md:p-10 shadow-card"
+          >
+            <h3 className="font-display font-700 text-xl md:text-2xl text-foreground mb-6">
+              Что мы делаем для роста продаж
+            </h3>
+            <ul className="space-y-4">
+              {[
+                "Анализируем конкурентов, прорабатываем стратегию продвижения",
+                "Пишем продающие тексты, оптимизируем под поисковую выдачу",
+                "Создаём до 100 000 объявлений по нужным регионам",
+                "Публикуем объявления по расписанию — всегда в топе выдачи",
+                "Правильно применяем рекламное продвижение",
+                "Рассылаем скидки покупателям из избранного",
+              ].map((text) => (
+                <li key={text} className="flex items-start gap-3">
+                  <span className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
+                  <span className="text-muted-foreground">{text}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-14 bg-card rounded-2xl p-8 md:p-10 shadow-card"
+          className="mt-6 rounded-2xl overflow-hidden shadow-card max-w-md mx-auto"
         >
-          <h3 className="font-display font-700 text-xl md:text-2xl text-foreground mb-6">
-            Что мы делаем для роста продаж
-          </h3>
-          <ul className="space-y-4">
-            {[
-              "Анализируем конкурентов, прорабатываем стратегию продвижения",
-              "Пишем продающие тексты, оптимизируем под поисковую выдачу",
-              "Создаём до 100 000 объявлений по нужным регионам",
-              "Публикуем объявления по расписанию — всегда в топе выдачи",
-              "Правильно применяем рекламное продвижение",
-              "Рассылаем скидки покупателям из избранного",
-            ].map((text) => (
-              <li key={text} className="flex items-start gap-3">
-                <span className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
-                <span className="text-muted-foreground">{text}</span>
-              </li>
-            ))}
-          </ul>
+          <img
+            src={topSearchImg}
+            alt="Объявления в ТОП поиска — легко!"
+            className="w-full object-cover"
+          />
         </motion.div>
       </div>
     </section>
