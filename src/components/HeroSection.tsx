@@ -63,16 +63,13 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative hidden lg:flex justify-center"
           >
-            <div className="relative w-80 h-80">
-              <div className="absolute inset-0 rounded-3xl bg-hero-gradient opacity-10 rotate-6" />
-              <div className="absolute inset-0 rounded-3xl bg-card shadow-card flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl font-display font-800 text-gradient">500K+</div>
-                  <p className="mt-2 text-muted-foreground font-medium">объявлений создано</p>
-                  <div className="mt-4 text-3xl font-display font-700 text-foreground">5 000+</div>
-                  <p className="text-muted-foreground text-sm">заявок в месяц</p>
-                </div>
-              </div>
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-3xl bg-hero-gradient opacity-10 rotate-3 blur-sm" />
+              <img
+                src={heroImg}
+                alt="Авитолог — привлекаем клиентов через Авито"
+                className="relative rounded-2xl shadow-card w-full max-w-md object-cover"
+              />
             </div>
           </motion.div>
         </div>
