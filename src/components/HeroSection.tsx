@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowDown } from "lucide-react";
+import heroImg from "@/assets/hero-avitolog.jpg";
 
 const HeroSection = () => {
   return (
