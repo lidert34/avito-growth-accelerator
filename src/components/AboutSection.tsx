@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Target, Zap, TrendingUp, Users } from "lucide-react";
 import leadsImg from "@/assets/leads-funnel.jpg";
-import topSearchImg from "@/assets/top-search.jpg";
+
 
 const stats = [
   { icon: Target, value: "10+", label: "новых магазинов в месяц" },
