@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Target, Zap, TrendingUp, Users } from "lucide-react";
 import leadsImg from "@/assets/leads-funnel.jpg";
-import topSearchImg from "@/assets/top-search.jpg";
+
 
 const stats = [
   { icon: Target, value: "10+", label: "новых магазинов в месяц" },
@@ -89,18 +89,6 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-6 rounded-2xl overflow-hidden shadow-card max-w-md mx-auto"
-        >
-          <img
-            src={topSearchImg}
-            alt="Объявления в ТОП поиска — легко!"
-            className="w-full object-cover"
-          />
-        </motion.div>
       </div>
     </section>
   );
